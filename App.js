@@ -4,6 +4,7 @@ import { Starting } from './src/starting';
 
 export default function App() {
   return (
+
       <View style={styles.container}>
         <Starting />
     </View>
