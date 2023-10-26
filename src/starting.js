@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ImageBackground } from 'react-native';
 import { globalStyle } from '../styles/style';
-
+import { startingStyles } from '../styles/startingStyles';
 
 export const Starting = props => {
     return (
-        <View style={[globalStyle.main, styles.starting]}>
-            <Text style={[globalStyle.title, styles.text]}>BuildMe</Text>
+        <View style={[globalStyle.main, startingStyles.container]}>
+            <ImageBackground source={require('../assets/images/background-circle.png')} style ={startingStyles.background} >
+                <Text style={[globalStyle.text, startingStyles.headerText]}>BuildMe</Text>
+            </ImageBackground>
             <Image source = {require('../assets/images/pointer.png')} />
-            <Text style={globalStyle.title}>Натискай і починай будувати</Text>
+            <Text style={[globalStyle.text, startingStyles.text]}>Натискай і починай будувати</Text>
         </View>
         
     )
 }
-
-const styles = StyleSheet.create({
-    starting: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 33,
-    }
-})
