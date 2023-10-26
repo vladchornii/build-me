@@ -13,5 +13,9 @@ export const startingStyles = StyleSheet.create({
         width: 219,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    pointer: {
+        marginTop: 10,
+        marginBottom: 10,
     }
 })

@@ -9,7 +9,7 @@ export const Starting = props => {
             <ImageBackground source={require('../assets/images/background-circle.png')} style ={startingStyles.background} >
                 <Text style={[globalStyle.text, startingStyles.headerText]}>BuildMe</Text>
             </ImageBackground>
-            <Image source = {require('../assets/images/pointer.png')} />
+            <Image source = {require('../assets/images/pointer.png')} style={startingStyles.pointer} />
             <Text style={[globalStyle.text, startingStyles.text]}>Натискай і починай будувати</Text>
         </View>
         
