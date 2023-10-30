@@ -25,7 +25,12 @@
     "react-native-screens": "~3.22.0",
     "react-native-svg": "13.9.0",
     "react-native-web": "~0.19.6",
+<<<<<<< HEAD
     "react-navigation": "^5.0.0"
+=======
+    "react-navigation": "^5.0.0",
+    "react-navigation-stack": "^2.10.4"
+>>>>>>> 43234626ce75bc44ef9c182b31df9f5323bf62c2
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { globalStyle } from '../styles/style';
 import { startingStyles } from '../styles/startingStyles';
 
-export const Starting = props => {
-    const handleButtonPress = () => {1
+export const Starting = ({navigation}) => {
+    const handleButtonPress = () => {
+        navigation.navigate('Authorization');
     };
     
     return (
@@ -17,6 +18,5 @@ export const Starting = props => {
             <Image source = {require('../assets/images/pointer.png')} style={startingStyles.pointer} />
             <Text style={[globalStyle.text, startingStyles.text]}>Натискай і починай будувати</Text>
         </View>
-        
     )
 }

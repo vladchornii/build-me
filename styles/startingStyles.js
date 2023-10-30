@@ -15,7 +15,7 @@ export const startingStyles = StyleSheet.create({
         justifyContent: 'center',
     },
     pointer: {
-        marginTop: 10,
-        marginBottom: 10,
+        marginTop: 20,
+        marginBottom: 20,
     }
 })
