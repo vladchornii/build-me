@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { globalStyle } from './styles/style';
 import { startingStyles } from './styles/startingStyles';
+import MainStack from './src/navigate';
 import { Starting } from './src/starting';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
@@ -30,3 +31,4 @@ export default function App() {
     );
   }
 }
+
