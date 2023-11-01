@@ -3,17 +3,13 @@ import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-nati
 import { globalStyle } from '../styles/style';
 import { startingStyles } from '../styles/startingStyles';
 
-export const Starting = ({navigation}) => {
-    const handleButtonPress = () => {
-        navigation.navigate('Authorization');
-    };
-    
+export function Starting({navigation}) {
     return (
         <View style={[globalStyle.main, startingStyles.container]}>
-            <TouchableOpacity style={startingStyles.button} onPress={handleButtonPress}>
+            <TouchableOpacity style={startingStyles.button} onPress={() => navigation.navigate('Authorization')}>
                 <ImageBackground source={require('../assets/images/background-circle.png')} style ={startingStyles.background} >
                     <Text style={[globalStyle.text, startingStyles.headerText]}>BuildMe</Text>
-                    </ImageBackground>
+                </ImageBackground>
             </TouchableOpacity>
             <Image source = {require('../assets/images/pointer.png')} style={startingStyles.pointer} />
             <Text style={[globalStyle.text, startingStyles.text]}>Натискай і починай будувати</Text>

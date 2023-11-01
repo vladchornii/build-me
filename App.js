@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, Image, View } from 'react-native';
 import { globalStyle } from './styles/style';
 import { startingStyles } from './styles/startingStyles';
-import MainStack from './src/navigate';
-import { Starting } from './src/starting';
+import Navigate from './src/navigation';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
@@ -18,7 +17,7 @@ export default function App() {
   if(font) {
     return (
       <View style={[globalStyle.main, startingStyles.starting]}>
-        <Starting />
+        <Navigate />
     </View>
     );
   } else {
@@ -31,4 +30,3 @@ export default function App() {
     );
   }
 }
-
