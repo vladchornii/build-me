@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 export default function Navigate() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Starting">
+            <Stack.Navigator>
                 <Stack.Screen
                 name = "Starting"
                 component = {Starting}

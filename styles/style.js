@@ -6,6 +6,7 @@ export const globalStyle = StyleSheet.create({
         padding: 20,
         alignItems: 'center',
         justifyContent: 'center',
+        minWidth: 320,
     },
     text: {
         fontSize: 14,
