@@ -8,17 +8,15 @@ import { NavigationContainer } from '@react-navigation/native';
 const Stack = createStackNavigator();
 export default function Navigate() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Starting">
-                <Stack.Screen
-                name = "Starting"
-                component = {Starting}
-                />
-                <Stack.Screen
-                name = "Authorization"
-                component = {Authorization}
-                />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator>
+            <Stack.Screen 
+            name = "starting"
+            component = {Starting}
+            />
+            <Stack.Screen
+            name = "Authorization"
+            component = {Authorization}
+            />
+        </Stack.Navigator>
     );
 }
