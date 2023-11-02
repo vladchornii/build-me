@@ -17,5 +17,8 @@ export const startingStyles = StyleSheet.create({
     pointer: {
         marginTop: 20,
         marginBottom: 20,
+    },
+    box: {
+        backgroundColor: 'rgba(90, 100, 87, 1)',
     }
 })
