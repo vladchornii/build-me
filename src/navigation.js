@@ -7,6 +7,7 @@ import { Registration} from './registration';
 import { FirstChoice } from './firstChoice';
 import { YourChoicePremisesLandscape } from './yourChoicePrLa';
 import { YourChoiceRoadWorks } from './yourChoiseRoad';
+import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -59,6 +60,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "YourChoiceRoadWorks"
             component = {YourChoiceRoadWorks}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "MoreDetailedChoicePremisesLandscape"
+            component = {MoreDetailedChoicePremisesLandscape}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>

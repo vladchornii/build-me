@@ -22,5 +22,4 @@ export const yourChoiceStyles = StyleSheet.create({
         gap: 20,
         marginTop: 200,
     }
-
 })

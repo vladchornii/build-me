@@ -12,7 +12,7 @@ export const YourChoicePremisesLandscape= ({ navigation }) => {
             <Text style={[globalStyle.text, yourChoiceStyles.headerText]}>Ви обрали:</Text>
             <Text style={[globalStyle.text, yourChoiceStyles.text]}>Приміщення(ззовні або всередині), ландшафт</Text>
             <Image source={require("../assets/images/choicePrLaIcon.png")}/>
-            <TouchableOpacity style={yourChoiceStyles.transition}>
+            <TouchableOpacity style={yourChoiceStyles.transition} onPress={() => {navigation.navigate("MoreDetailedChoicePremisesLandscape"); }}>
                 <Text style={[globalStyle.text, yourChoiceStyles.transitionText]}>Все вірно!</Text>
                 <Image source={require("../assets/images/symbol.png")}/>
             </TouchableOpacity>
