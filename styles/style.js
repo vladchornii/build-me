@@ -13,8 +13,5 @@ export const globalStyle = StyleSheet.create({
         fontFamily: 'playfair-regular',
         color: 'rgba(90, 100, 87, 1)',
 
-    },
-    fullWidthContainer: {
-        width: '100%',
     }
 })
