@@ -1,31 +1,35 @@
 import React from 'react';
-import { View, Text, TextInput, Button  } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity  } from 'react-native';
+import { registrationStyles } from "../styles/registrationStyles";
+import { globalStyle } from '../styles/style';
 
-export function Registration() {
+export function Registration({navigation}) {
   const [tel, setPhoneNumber] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   return (
-      <View>
-        <Text>Зареєструйся!</Text>
-        <Text>вступай в нашу команду</Text>
-        <TextInput
+      <View style={globalStyle.main}>
+        <Text style={[registrationStyles.headerText,]}>Зареєструйся!</Text>
+        <Text style={registrationStyles.text}>вступай в нашу команду</Text>
+        <TextInput  style={registrationStyles.input}
              onChangeText={(text) => setPhoneNumber(text)}
              value={tel}
              placeholder ="Номер телефону"
            />
-        <TextInput
+        <TextInput style={registrationStyles.input}
              onChangeText={(text) => setEmail(text)}
              value={email}
              placeholder ="E-mail"
            />
-           <TextInput
+           <TextInput style={registrationStyles.input}
              onChangeText={(text) => setPassword(text)}
              value={password}
              placeholder ="Пароль"
              secureTextEntry={true}
            />
-         <Button title="Раді вітати!" onPress={() => {navigation.navigate('Subscription')}}/>
+          <TouchableOpacity style={registrationStyles.continueButton} onPress={() => {navigation.navigate("Subscription"); }}>
+            <Text style={registrationStyles.continueButtonText}>Раді вітати!</Text>
+          </TouchableOpacity>  
       </View>
   )
 }
