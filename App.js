@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, Image, View } from 'react-native';
+/*import { StyleSheet, Text, Image, View } from 'react-native';
 import { globalStyle } from './styles/style';
-import { startingStyles } from './styles/startingStyles';
+import { startingStyles } from './styles/startingStyles';*/
 import Navigate from './src/navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import * as Font from 'expo-font';
