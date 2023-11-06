@@ -3,8 +3,9 @@ import { Starting } from './starting';
 import { Transition } from './transition';
 import { Authorization } from './authorization';
 import { Subscription } from './subscription';
-
+import { Registration} from './registration';
 import { createStackNavigator } from '@react-navigation/stack';
+
 
 const forFade = ({ current }) => ({
     cardStyle: {
@@ -34,6 +35,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "Subscription"
             component = {Subscription}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "Registration"
+            component = {Registration}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>
