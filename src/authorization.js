@@ -1,42 +1,41 @@
-import React from 'react';
-import { View, Text, Image, TextInput, Button } from 'react-native';
-import { globalStyle } from '../styles/style';
-import { authorizationStyles } from '../styles/authorizationStyles';
-import { StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, Image, TextInput, Button, TouchableOpacity} from "react-native";
+import { globalStyle } from "../styles/style";
+import { authorizationStyles } from "../styles/authorizationStyles";
 
-export const Authorization = ({navigation}) => {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+export const Authorization = ({ navigation }) => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-    return (
-        <View style={[globalStyle.main, authorizationStyles.box]}>
-            <Image source = {require('../assets/images/background-authorization.png')} />
-            <Text style={[authorizationStyles.text, authorizationStyles.headerText]}>Увійти</Text>
-            <TextInput
-        style={styles.input}
+  return (
+    <View style={[globalStyle.main, authorizationStyles.box]}>
+      <Image source={require("../assets/images/background-authorization.png")}/>
+      <Text style={[authorizationStyles.text, authorizationStyles.headerText]}>Увійти</Text>
+      <TextInput
+        style={authorizationStyles.input}
         onChangeText={(text) => setEmail(text)}
         value={email}
-        placeholder ="E-mail"
+        placeholder="E-mail"
+        placeholderStyle={authorizationStyles.text}
+        placeholderTextColor='rgba(244, 240, 232, 1)'
       />
-            <TextInput
-        style={styles.input}
+      <TextInput
+        style={authorizationStyles.input}
         onChangeText={(text) => setPassword(text)}
         value={password}
-        placeholder ="Пароль"
+        placeholder="Пароль"
+        placeholderTextColor='rgba(244, 240, 232, 1)'
         secureTextEntry={true}
       />
-       <Button title="Продовжити" onPress={() => {navigation.navigate('Subscription')}}/>
-       <Button title="Зареєструватися"/>
-       <Button title="Забули пароль?"/>
+      <TouchableOpacity style={authorizationStyles.continueButton} onPress={() => {navigation.navigate("Subscription"); }}>
+        <Text style={authorizationStyles.continueButtonText}>Продовжити</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Text style={authorizationStyles.buttonText}>Зареєструватися</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={authorizationStyles.forgotPasswordButton}>
+        <Text style={authorizationStyles.buttonText}>Забули пароль?</Text>
+      </TouchableOpacity>
     </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-    },
-  });
+  );
+};
