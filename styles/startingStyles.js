@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export const startingStyles = StyleSheet.create({
-    container: {},
     headerText: {
         fontSize: 33,
         fontFamily: 'playfair-bold',
@@ -17,5 +16,8 @@ export const startingStyles = StyleSheet.create({
     pointer: {
         marginTop: 20,
         marginBottom: 20,
+    },
+    box: {
+        backgroundColor: 'rgba(90, 100, 87, 1)',
     }
 })

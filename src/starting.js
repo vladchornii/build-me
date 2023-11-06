@@ -6,7 +6,7 @@ import { startingStyles } from '../styles/startingStyles';
 export function Starting({navigation}) {
     return (
         <View style={[globalStyle.main, startingStyles.container]}>
-            <TouchableOpacity style={startingStyles.button} onPress={() => navigation.navigate('Authorization')}>
+            <TouchableOpacity style={startingStyles.button} onPress={() => {navigation.navigate('Transition')}}>
                 <ImageBackground source={require('../assets/images/background-circle.png')} style ={startingStyles.background} >
                     <Text style={[globalStyle.text, startingStyles.headerText]}>BuildMe</Text>
                 </ImageBackground>

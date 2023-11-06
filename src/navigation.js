@@ -1,9 +1,16 @@
 import React from 'react';
-import {Starting} from './starting';
-import {Authorization} from './authorization';
+import { Starting } from './starting';
+import { Transition } from './transition';
+import { Authorization } from './authorization';
+import { Subscription } from './subscription';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
+
+const forFade = ({ current }) => ({
+    cardStyle: {
+      opacity: current.progress,
+    },
+  });
 
 const Stack = createStackNavigator();
 export default function Navigate() {
@@ -12,10 +19,22 @@ export default function Navigate() {
             <Stack.Screen 
             name = "starting"
             component = {Starting}
+            options={{ headerShown: false}}
+            />
+            <Stack.Screen
+            name = "Transition"
+            component = {Transition}
+            options={{ headerShown: false }}
             />
             <Stack.Screen
             name = "Authorization"
             component = {Authorization}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "Subscription"
+            component = {Subscription}
+            options={{ headerShown: false }}
             />
         </Stack.Navigator>
     );
