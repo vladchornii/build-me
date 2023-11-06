@@ -1,7 +1,8 @@
 import React from 'react';
-import {Starting} from './starting';
-import {Transition} from './transition';
+import { Starting } from './starting';
+import { Transition } from './transition';
 import { Authorization } from './authorization';
+import { Subscription } from './subscription';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -28,6 +29,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "Authorization"
             component = {Authorization}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "Subscription"
+            component = {Subscription}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>

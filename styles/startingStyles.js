@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export const startingStyles = StyleSheet.create({
-    container: {},
     headerText: {
         fontSize: 33,
         fontFamily: 'playfair-bold',
