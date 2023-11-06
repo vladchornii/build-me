@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Platform, Keyboard} from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, KeyboardAvoidingView} from "react-native";
 import { globalStyle } from "../styles/style";
 import { authorizationStyles } from "../styles/authorizationStyles";
 

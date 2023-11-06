@@ -22,7 +22,7 @@ export const registrationStyles = StyleSheet.create({
     margin: 5,
     paddingLeft: 20,
     color: 'rgba(90, 100, 87, 1)',
-},
+   },
 continueButton: {
   height: 58,
   width: 290,

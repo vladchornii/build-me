@@ -4,6 +4,10 @@ import { Transition } from './transition';
 import { Authorization } from './authorization';
 import { Subscription } from './subscription';
 import { Registration} from './registration';
+import { FirstChoice } from './firstChoice';
+import { YourChoicePremisesLandscape } from './yourChoicePrLa';
+import { YourChoiceRoadWorks } from './yourChoiseRoad';
+
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -40,6 +44,21 @@ export default function Navigate() {
             <Stack.Screen
             name = "Registration"
             component = {Registration}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "FirstChoice"
+            component = {FirstChoice}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "YourChoicePremisesLandscape"
+            component = {YourChoicePremisesLandscape}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "YourChoiceRoadWorks"
+            component = {YourChoiceRoadWorks}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>

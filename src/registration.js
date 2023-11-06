@@ -15,16 +15,19 @@ export function Registration({navigation}) {
              onChangeText={(text) => setPhoneNumber(text)}
              value={tel}
              placeholder ="Номер телефону"
+             placeholderTextColor='rgba(90, 100, 87, 1)'
            />
         <TextInput style={registrationStyles.input}
              onChangeText={(text) => setEmail(text)}
              value={email}
              placeholder ="E-mail"
+             placeholderTextColor='rgba(90, 100, 87, 1)'
            />
            <TextInput style={registrationStyles.input}
              onChangeText={(text) => setPassword(text)}
              value={password}
              placeholder ="Пароль"
+             placeholderTextColor='rgba(90, 100, 87, 1)'
              secureTextEntry={true}
            />
           <TouchableOpacity style={registrationStyles.continueButton} onPress={() => {navigation.navigate("Subscription"); }}>
