@@ -22,6 +22,7 @@ export const authorizationStyles = StyleSheet.create({
         borderColor: 'rgba(244, 240, 232, 1)',
         margin: 5,
         paddingLeft: 20,
+        color: 'rgba(244, 240, 232, 1)',
     },
     continueButton: {
         height: 58,
