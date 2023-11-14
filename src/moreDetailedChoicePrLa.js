@@ -11,7 +11,7 @@ export const MoreDetailedChoicePremisesLandscape= ({ navigation }) => {
             </TouchableOpacity>
             <Image style={moreDetailedChoiceStyles.image} source={require("../assets/images/moreDetailedChoicePrLaIcon.png")}/>
             <Text style={[globalStyle.text, moreDetailedChoiceStyles.headerText]}>Обери,що саме тобі потрібно</Text>
-            <TouchableOpacity style={moreDetailedChoiceStyles.button}>
+            <TouchableOpacity style={moreDetailedChoiceStyles.button}  onPress={() => {navigation.navigate("SmallRoom")}}>
                 <Text style={[globalStyle.text, moreDetailedChoiceStyles.buttonText]}>Невелике приміщення</Text>
             </TouchableOpacity>
             <TouchableOpacity style={moreDetailedChoiceStyles.button}>
