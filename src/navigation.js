@@ -8,15 +8,8 @@ import { FirstChoice } from './firstChoice';
 import { YourChoicePremisesLandscape } from './yourChoicePrLa';
 import { YourChoiceRoadWorks } from './yourChoiseRoad';
 import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
-
 import { createStackNavigator } from '@react-navigation/stack';
-
-
-const forFade = ({ current }) => ({
-    cardStyle: {
-      opacity: current.progress,
-    },
-  });
+import { SmallRoom } from './smallRoom';
 
 const Stack = createStackNavigator();
 export default function Navigate() {
@@ -65,6 +58,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "MoreDetailedChoicePremisesLandscape"
             component = {MoreDetailedChoicePremisesLandscape}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "SmallRoom"
+            component = {SmallRoom}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>
