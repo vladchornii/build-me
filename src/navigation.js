@@ -11,13 +11,6 @@ import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-
-const forFade = ({ current }) => ({
-    cardStyle: {
-      opacity: current.progress,
-    },
-  });
-
 const Stack = createStackNavigator();
 export default function Navigate() {
     return (
