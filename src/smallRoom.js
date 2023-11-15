@@ -5,7 +5,7 @@ import { SmallRoomStyles } from "../styles/smallRoomStyles";
 
 export const SmallRoom = ({ navigation }) =>{
   return (
- <View style={[ SmallRoomStyles.container]}>
+ <View style={[globalStyle.container]}>
     <TouchableOpacity style={SmallRoomStyles.arrow} onPress={() => {navigation.navigate("MoreDetailedChoicePremisesLandscape"); }}>
       <Image source={require("../assets/images/arrow.png")}/>
     </TouchableOpacity>

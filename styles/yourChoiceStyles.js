@@ -16,6 +16,7 @@ export const yourChoiceStyles = StyleSheet.create({
     arrow:{
         alignSelf: 'flex-start',
         marginBottom: 100,
+        padding: 20,
     },
     transition: {
         flexDirection: 'row',

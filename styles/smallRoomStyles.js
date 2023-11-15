@@ -1,18 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export const SmallRoomStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-        paddingTop: 140,
-        alignItems: 'center',
-        marginBottom: 100,
-    },
   headerText: {
     textAlign: 'center',
     fontSize: 25,
     fontFamily: 'playfair-bold',
-    marginBottom: 50,
+    marginTop: 20,
+    marginBottom: 60,
 },
 text: {
     fontSize: 18,
