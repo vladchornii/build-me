@@ -1,27 +1,28 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity} from "react-native";
 import { globalStyle } from "../styles/style";
+import { SmallRoomStyles } from "../styles/smallRoomStyles";
 
 export const SmallRoom = ({ navigation }) =>{
   return (
- <View style={globalStyle.main}>
-    <TouchableOpacity onPress={() => {navigation.navigate("YourChoicePremisesLandscape"); }}>
+ <View style={[ SmallRoomStyles.container]}>
+    <TouchableOpacity style={SmallRoomStyles.arrow} onPress={() => {navigation.navigate("MoreDetailedChoicePremisesLandscape"); }}>
       <Image source={require("../assets/images/arrow.png")}/>
     </TouchableOpacity>
-    <Image source={require("../assets/images/moreDetailedChoicePrLaIcon.png")}/>
-    <Text>Ви обрали:</Text>
-    <TouchableOpacity>
-      <Text style={globalStyle.text}>Невелике приміщення</Text>
+    <Image style={SmallRoomStyles.image} source={require("../assets/images/moreDetailedChoicePrLaIcon.png")}/>
+    <Text style={[globalStyle.text, SmallRoomStyles.headerText]}>Ви обрали:</Text>
+    <TouchableOpacity style={SmallRoomStyles.button}>
+      <Text style={[globalStyle.text, SmallRoomStyles.buttonText]}>Невелике приміщення</Text>
     </TouchableOpacity>
-    <Image source={require("../assets/images/downPointer.png")}/>
+    <Image style={SmallRoomStyles.pointer} source={require("../assets/images/downPointer.png")}/>
     <TouchableOpacity onPress={() => {navigation.navigate("Walls"); }}>
-    <Text style={[globalStyle.text]}>Стіни</Text>
+    <Text style={[globalStyle.text, SmallRoomStyles.text]}>Стіни</Text>
     </TouchableOpacity>
     <TouchableOpacity >
-    <Text style={[globalStyle.text]}>Підлога</Text>
+    <Text style={[globalStyle.text, SmallRoomStyles.text]}>Підлога</Text>
     </TouchableOpacity>
     <TouchableOpacity >
-    <Text style={[globalStyle.text]}>Стеля</Text>
+    <Text style={[globalStyle.text, SmallRoomStyles.text]}>Стеля</Text>
     </TouchableOpacity>
  </View>
   );
