@@ -24,7 +24,7 @@ export const Walls= ({ navigation }) => {
                 <Text style={[globalStyle.text, WallsStyles.text, WallsStyles.clicker]}>Плитка</Text>
             </TouchableOpacity>
             <TouchableOpacity>
-                <Text style={[globalStyle.text, WallsStyles.text, WallsStyles.clicker]}>Шпалери</Text>
+                <Text style={[globalStyle.text, WallsStyles.text, WallsStyles.clicker]} >Шпалери</Text>
             </TouchableOpacity>
         </View>
     );
