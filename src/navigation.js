@@ -11,6 +11,7 @@ import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SmallRoom } from './smallRoom';
 import { Walls } from './walls';
+import { Tile } from './tile';
 
 
 const Stack = createStackNavigator();
@@ -70,6 +71,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "Walls"
             component = {Walls}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "Tile"
+            component = {Tile}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>
