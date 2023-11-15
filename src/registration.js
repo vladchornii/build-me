@@ -7,7 +7,6 @@ import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from "./firebase-config";
 
 export function Registration({navigation}) {
-  const [tel, setPhoneNumber] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -34,12 +33,6 @@ export function Registration({navigation}) {
       <View style={globalStyle.main}>
         <Text style={[registrationStyles.headerText,]}>Зареєструйся!</Text>
         <Text style={registrationStyles.text}>вступай в нашу команду</Text>
-        {/* <TextInput  style={registrationStyles.input}
-             onChangeText={(text) => setPhoneNumber(text)}
-             value={tel}
-             placeholder ="Номер телефону"
-             placeholderTextColor='rgba(90, 100, 87, 1)'
-           /> */}
         <TextInput style={registrationStyles.input}
              onChangeText={(text) => setEmail(text)}
              value={email}
