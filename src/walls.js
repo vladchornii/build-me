@@ -20,7 +20,7 @@ export const Walls= ({ navigation }) => {
             <TouchableOpacity>
                 <Text style={[globalStyle.text, WallsStyles.text, WallsStyles.clicker]}>Облицювання</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => {navigation.navigate("Tile"); }}>
                 <Text style={[globalStyle.text, WallsStyles.text, WallsStyles.clicker]}>Плитка</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {navigation.navigate("Wallpaper"); }}>
