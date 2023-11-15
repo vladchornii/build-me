@@ -37,5 +37,24 @@ export const CalcWallpaperWallStyles = StyleSheet.create({
     },
     buttonText:{
         color: 'rgba(244, 240, 232, 1)',
-    }
+    },
+    modalContainer: {
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        height: '30%', 
+        borderTopLeftRadius: 50,
+        borderTopRightRadius: 50,
+        backgroundColor: 'rgba(90, 100, 87, 1)',
+      },
+      dropDownText:{
+        color: 'rgba(244, 240, 232, 1)',
+        textAlign: 'center',
+        marginBottom: 15,
+      },
+      image:{
+       alignSelf: 'flex-end',
+       marginRight: 25,
+       marginTop: 15,
+      }
 })

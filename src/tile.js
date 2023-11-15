@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, TextInput} from "react-native";
 import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
@@ -8,6 +8,10 @@ export const Tile= ({ navigation }) => {
   const [widthTile, onChangeWidthTile] = React.useState('');
   const [lengthWall, onChangeLengthWall] = React.useState('');
   const [widthWall, onChangeWidthWall] = React.useState('');
+  const [modalVisible, setModalVisible] = React.useState(false);
+  const toggleModal = () => {
+      setModalVisible(!modalVisible);
+  };
   return(
      <View style={globalStyle.container}>
         <TouchableOpacity style={CalcWallpaperWallStyles.arrow} onPress={() => {navigation.navigate("Walls"); }}>
@@ -43,9 +47,18 @@ export const Tile= ({ navigation }) => {
              value={widthWall} 
              keyboardType="numeric"
            />
-         <TouchableOpacity style={CalcWallpaperWallStyles.button}>
-          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText]}>Розрахунок</Text>
+         <TouchableOpacity style={CalcWallpaperWallStyles.button} onPress={toggleModal}>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
         </TouchableOpacity>
+        {modalVisible && (
+        <View style={CalcWallpaperWallStyles.modalContainer}>
+          <TouchableOpacity onPress={toggleModal}>
+          <Image style={CalcWallpaperWallStyles.image} source={require("../assets/images/cross.png")}/>
+          </TouchableOpacity>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
+          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно настінної плитки:</Text>
+        </View>
+        )}
      </View>
- );
-};
+ )};
+
