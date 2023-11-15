@@ -11,11 +11,8 @@ import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SmallRoom } from './smallRoom';
 import { Walls } from './walls';
-<<<<<<< HEAD
 import { Wallpaper } from './wallpaper';
-=======
 import { Tile } from './tile';
->>>>>>> 45f6cb7cfba12eb0c398eda30271ef73d2b836a3
 
 
 const Stack = createStackNavigator();
