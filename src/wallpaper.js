@@ -6,9 +6,9 @@ import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
 export function Wallpaper({navigation}) {
     const [lengthWallpaper, onChangeLengthWallpaper] = React.useState('');
-    const [widthhWallpaper, onChangeWidthWallpaper] = React.useState('');
+    const [widthWallpaper, onChangeWidthWallpaper] = React.useState('');
     const [lengthWall, onChangeLengthWall] = React.useState('');
-    const [widthhWall, onChangeWidthWall] = React.useState('');
+    const [widthWall, onChangeWidthWall] = React.useState('');
 
     return (
         <View style={globalStyle.container}>
@@ -28,7 +28,7 @@ export function Wallpaper({navigation}) {
             <TextInput
              style={CalcWallpaperWallStyles.input}
              onChangeText={onChangeWidthWallpaper}
-             value={widthhWallpaper} 
+             value={widthWallpaper} 
              keyboardType="numeric"
            />
            <Text style={[globalStyle.text, CalcWallpaperWallStyles.text]}>Довжина стіни, м</Text>
@@ -42,7 +42,7 @@ export function Wallpaper({navigation}) {
             <TextInput
              style={CalcWallpaperWallStyles.input}
              onChangeText={onChangeWidthWall}
-             value={widthhWall} 
+             value={widthWall} 
              keyboardType="numeric"
            />
            <TouchableOpacity style={CalcWallpaperWallStyles.button}>
