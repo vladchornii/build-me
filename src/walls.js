@@ -5,7 +5,7 @@ import { WallsStyles } from "../styles/wallsStyles";
 
 export const Walls= ({ navigation }) => {
     return (
-        <View style={globalStyle.main}>
+        <View style={globalStyle.container}>
             <TouchableOpacity style={WallsStyles.arrow} onPress={() => {navigation.navigate("SmallRoom"); }}>
                 <Image source={require("../assets/images/arrow.png")}/>
             </TouchableOpacity>

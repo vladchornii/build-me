@@ -12,6 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SmallRoom } from './smallRoom';
 import { Walls } from './walls';
 
+
 const Stack = createStackNavigator();
 export default function Navigate() {
     return (

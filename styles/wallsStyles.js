@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const WallsStyles = StyleSheet.create({
     headerText:{
-        marginBottom: 50,
+        marginBottom: 60,
     },
     text: {
         fontSize: 18,
@@ -20,7 +20,7 @@ export const WallsStyles = StyleSheet.create({
         borderColor: 'rgba(90, 100, 87, 1)',
         margin: 10,
         backgroundColor: 'rgba(90, 100, 87, 1)',
-        marginBottom: 30, 
+        marginBottom: 40, 
     },
     boldText: {
         fontFamily: 'playfair-bold',
@@ -37,6 +37,6 @@ export const WallsStyles = StyleSheet.create({
         marginBottom: 30,
     },
     image: {
-        marginBottom: 70,
+        marginBottom: 90,
     }
 })

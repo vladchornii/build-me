@@ -5,12 +5,12 @@ import { moreDetailedChoiceStyles } from '../styles/moreDetailedChoiceStyles';
 
 export const MoreDetailedChoicePremisesLandscape= ({ navigation }) => {
     return (
-        <View style={globalStyle.main}>
+        <View style={globalStyle.container}>
             <TouchableOpacity style={moreDetailedChoiceStyles.arrow} onPress={() => {navigation.navigate("YourChoicePremisesLandscape"); }}>
                 <Image source={require("../assets/images/arrow.png")}/>
             </TouchableOpacity>
             <Image style={moreDetailedChoiceStyles.image} source={require("../assets/images/moreDetailedChoicePrLaIcon.png")}/>
-            <Text style={[globalStyle.text, moreDetailedChoiceStyles.headerText]}>Обери,що саме тобі потрібно</Text>
+            <Text style={[globalStyle.text, moreDetailedChoiceStyles.headerText]}>Обери,що саме тобі{'\n'}потрібно</Text>
             <TouchableOpacity style={moreDetailedChoiceStyles.button}  onPress={() => {navigation.navigate("SmallRoom")}}>
                 <Text style={[globalStyle.text, moreDetailedChoiceStyles.buttonText]}>Невелике приміщення</Text>
             </TouchableOpacity>
