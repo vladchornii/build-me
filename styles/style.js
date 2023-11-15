@@ -21,5 +21,6 @@ export const globalStyle = StyleSheet.create({
     headerText: {
         fontSize: 25,
         fontFamily: 'playfair-bold',
-    }
+        borderRadius: 10,
+    },
 })
