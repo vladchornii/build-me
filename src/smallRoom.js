@@ -18,7 +18,7 @@ export const SmallRoom = ({ navigation }) =>{
     <TouchableOpacity onPress={() => {navigation.navigate("Walls"); }}>
     <Text style={[globalStyle.text, SmallRoomStyles.text]}>Стіни</Text>
     </TouchableOpacity>
-    <TouchableOpacity >
+    <TouchableOpacity onPress={() => {navigation.navigate("Floor"); }} >
     <Text style={[globalStyle.text, SmallRoomStyles.text]}>Підлога</Text>
     </TouchableOpacity>
     <TouchableOpacity >

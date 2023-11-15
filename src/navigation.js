@@ -13,6 +13,9 @@ import { SmallRoom } from './smallRoom';
 import { Walls } from './walls';
 import { Wallpaper } from './wallpaper';
 import { Tile } from './tile';
+import { Floor } from './floor';
+import { TileFloor } from './tileFloor';
+import { RollCovers } from './rollCovers';
 
 
 const Stack = createStackNavigator();
@@ -82,6 +85,21 @@ export default function Navigate() {
             <Stack.Screen
             name = "Wallpaper"
             component = {Wallpaper}
+            options={{ headerShown: false }}
+            />
+             <Stack.Screen
+            name = "Floor"
+            component = {Floor}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "TileFloor"
+            component = {TileFloor}
+            options={{ headerShown: false }}
+            />
+             <Stack.Screen
+            name = "RollCovers"
+            component = {RollCovers}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>
