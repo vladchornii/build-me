@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, Image, ImageBackground, TouchableOpacity} from "react-native";
+import { View, Text, Image, ImageBackground, TouchableOpacity} from "react-native";
 import { globalStyle } from '../styles/style';
 import { startingStyles } from '../styles/startingStyles';
 
