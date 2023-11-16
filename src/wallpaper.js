@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import {View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
+import {View, Text, TouchableOpacity, Image, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { globalStyle } from "../styles/style";
-import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
-
+import { CalcWallpaperWallStyles } from "../styles/calcWallpaperWallStyles";
 
 export function Wallpaper({navigation}) {
     const [lengthWallpaper, onChangeLengthWallpaper] = React.useState('');
@@ -14,6 +13,7 @@ export function Wallpaper({navigation}) {
         setModalVisible(!modalVisible);
     };
     return (
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={globalStyle.container}>
             <TouchableOpacity style={CalcWallpaperWallStyles.arrow} onPress={() => {navigation.navigate("Walls"); }}>
                 <Image source={require("../assets/images/arrow.png")}/>
@@ -61,5 +61,6 @@ export function Wallpaper({navigation}) {
         </View>
         )}
         </View>
+      </TouchableWithoutFeedback>
     )
 }

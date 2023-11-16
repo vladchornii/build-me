@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity} from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { globalStyle } from "../styles/style";
 import { SmallRoomStyles } from "../styles/smallRoomStyles";
 
-export const SmallRoom = ({ navigation }) =>{
+export const SmallRoom = ({ navigation }) => {
   return (
  <View style={[globalStyle.container]}>
     <TouchableOpacity style={SmallRoomStyles.arrow} onPress={() => {navigation.navigate("MoreDetailedChoicePremisesLandscape"); }}>

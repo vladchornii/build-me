@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, TextInput} from "react-native";
+import { View, Text, Image, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard} from "react-native";
 import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
@@ -13,7 +13,8 @@ export const Tile= ({ navigation }) => {
       setModalVisible(!modalVisible);
   };
   return(
-     <View style={globalStyle.container}>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={globalStyle.container}>
         <TouchableOpacity style={CalcWallpaperWallStyles.arrow} onPress={() => {navigation.navigate("Walls"); }}>
           <Image source={require("../assets/images/arrow.png")}/>
         </TouchableOpacity>
@@ -59,6 +60,7 @@ export const Tile= ({ navigation }) => {
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно настінної плитки:</Text>
         </View>
         )}
-     </View>
+      </View>
+    </TouchableWithoutFeedback>
  )};
 

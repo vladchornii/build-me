@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, TextInput} from "react-native";
+import { View, Text, Image, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard} from "react-native";
 import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
@@ -19,6 +19,7 @@ export const RollCovers= ({ navigation }) => {
   //   var modalVisible = sWall/sWallpaper;
   // }
   return(
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
      <View style={globalStyle.container}>
         <TouchableOpacity style={CalcWallpaperWallStyles.arrow} onPress={() => {navigation.navigate("Floor"); }}>
           <Image source={require("../assets/images/arrow.png")}/>
@@ -65,6 +66,7 @@ export const RollCovers= ({ navigation }) => {
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно рулонів:</Text>
         </View>
         )}
-     </View>
+      </View>
+    </TouchableWithoutFeedback>
  );
 };
