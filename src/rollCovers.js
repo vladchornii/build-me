@@ -4,14 +4,20 @@ import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
 export const RollCovers= ({ navigation }) => {
-  const [lengthTile, onChangeLengthTile] = React.useState('');
-  const [widthTile, onChangeWidthTile] = React.useState('');
+  const [lengthWallpaper, onChangeLengthWallpaper] = React.useState('');
+  const [widthWallpaper, onChangeWidthWallpaper] = React.useState('');
   const [lengthWall, onChangeLengthWall] = React.useState('');
   const [widthWall, onChangeWidthWall] = React.useState('');
   const [modalVisible, setModalVisible] = React.useState(false);
   const toggleModal = () => {
       setModalVisible(!modalVisible);
   };
+
+  // const calculateRollCovers = () => {
+  //   var sWallpaper = lengthWallpaper*widthWallpaper;
+  //   var sWall = widthWall*lengthWall;
+  //   var modalVisible = sWall/sWallpaper;
+  // }
   return(
      <View style={globalStyle.container}>
         <TouchableOpacity style={CalcWallpaperWallStyles.arrow} onPress={() => {navigation.navigate("Floor"); }}>
@@ -22,15 +28,15 @@ export const RollCovers= ({ navigation }) => {
         <Text style= {[ globalStyle.text, CalcWallpaperWallStyles.text]}>Довжина рулону, м</Text>
         <TextInput
              style={CalcWallpaperWallStyles.input}
-             onChangeText={onChangeLengthTile}
-             value={lengthTile} 
+             onChangeText={onChangeLengthWallpaper}
+             value={lengthWallpaper} 
              keyboardType="numeric"
            />
         <Text style={[globalStyle.text, CalcWallpaperWallStyles.text]}>Ширина рулону, м</Text>
         <TextInput
              style={CalcWallpaperWallStyles.input}
-             onChangeText={onChangeWidthTile}
-             value={widthTile} 
+             onChangeText={onChangeWidthWallpaper}
+             value={widthWallpaper} 
              keyboardType="numeric"
            />
         <Text style={[globalStyle.text, CalcWallpaperWallStyles.text]}>Довжина підлоги, м</Text>
