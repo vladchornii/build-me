@@ -4,6 +4,7 @@ import { Transition } from './transition';
 import { Authorization } from './authorization';
 import { Subscription } from './subscription';
 import { Registration} from './registration';
+import { ForgotPassword } from './forgotPassword'
 import { FirstChoice } from './firstChoice';
 import { YourChoicePremisesLandscape } from './yourChoicePrLa';
 import { YourChoiceRoadWorks } from './yourChoiseRoad';
@@ -45,6 +46,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "Registration"
             component = {Registration}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "ForgotPassword"
+            component = {ForgotPassword}
             options={{ headerShown: false }}
             />
             <Stack.Screen
