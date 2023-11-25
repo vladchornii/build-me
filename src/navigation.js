@@ -4,11 +4,12 @@ import { Transition } from './transition';
 import { Authorization } from './authorization';
 import { Subscription } from './subscription';
 import { Registration} from './registration';
+import { ForgotPassword } from './forgotPassword'
 import { FirstChoice } from './firstChoice';
 import { YourChoicePremisesLandscape } from './yourChoicePrLa';
 import { YourChoiceRoadWorks } from './yourChoiseRoad';
 import { MoreDetailedChoicePremisesLandscape } from './moreDetailedChoicePrLa';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { SmallRoom } from './smallRoom';
 import { Walls } from './walls';
 import { Wallpaper } from './wallpaper';
@@ -21,11 +22,11 @@ import { RollCovers } from './rollCovers';
 const Stack = createStackNavigator();
 export default function Navigate() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ gestureEnabled: false, cardStyleInterpolator: ({ current: { progress } }) => ({cardStyle: {opacity: progress},}),  }}>
             <Stack.Screen 
             name = "starting"
             component = {Starting}
-            options={{ headerShown: false}}
+            options={{ headerShown: false }}
             />
             <Stack.Screen
             name = "Transition"
@@ -45,6 +46,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "Registration"
             component = {Registration}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "ForgotPassword"
+            component = {ForgotPassword}
             options={{ headerShown: false }}
             />
             <Stack.Screen

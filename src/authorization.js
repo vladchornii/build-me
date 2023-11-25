@@ -31,7 +31,7 @@ export const Authorization = ({ navigation }) => {
   return (
     <KeyboardAvoidingView behavior="padding" style={[globalStyle.main, authorizationStyles.box]}>
       <View style={[globalStyle.main, authorizationStyles.box]}>
-        <Image source={require("../assets/images/background-authorization.png")}/>
+        <Image style={authorizationStyles.image} source={require("../assets/images/background-authorization.png")}/>
         <Text style={[authorizationStyles.text, authorizationStyles.headerText]}>Увійти</Text>
         <TextInput
           style={[authorizationStyles.input]}
@@ -60,7 +60,7 @@ export const Authorization = ({ navigation }) => {
         <TouchableOpacity onPress={() => {navigation.navigate("Registration"); }}>
           <Text style={authorizationStyles.buttonText}>Зареєструватися</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={authorizationStyles.forgotPasswordButton}>
+        <TouchableOpacity style={authorizationStyles.forgotPasswordButton} onPress={() => {navigation.navigate("ForgotPassword"); }}>
           <Text style={authorizationStyles.buttonText}>Забули пароль?</Text>
         </TouchableOpacity>
       </View> 

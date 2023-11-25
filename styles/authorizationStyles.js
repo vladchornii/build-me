@@ -51,5 +51,8 @@ export const authorizationStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
         marginBottom: 50,
+    },
+    image:{
+        maxWidth: '100%',
     }
 })
