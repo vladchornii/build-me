@@ -63,7 +63,7 @@ export const TileFloor= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно плитки на підлогу:</Text>
-          <Text>{result}</Text>
+          <Text >{result}</Text>
         </View>
         )}
      </View>

@@ -21,7 +21,10 @@ export const YourChoiceRoadWorks = ({ navigation }) => {
         Будь-які дорожні роботи
       </Text>
       <Image source={require("../assets/images/choiceRoadWorksIcon.png")} />
-      <TouchableOpacity style={yourChoiceStyles.transition}>
+      <TouchableOpacity style={yourChoiceStyles.transition} 
+      onPress={() => {
+          navigation.navigate("MoreDetailedChoiseRoad");
+        }}>
         <Text style={[globalStyle.text, yourChoiceStyles.transitionText]}>
           Все вірно!
         </Text>

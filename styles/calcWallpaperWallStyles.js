@@ -33,7 +33,7 @@ export const CalcWallpaperWallStyles = StyleSheet.create({
         borderRadius: 50,
         borderColor: 'rgba(90, 100, 87, 1)',
         backgroundColor: 'rgba(90, 100, 87, 1)',
-        marginTop: 20,
+        marginTop: 5,
     },
     buttonText:{
         color: 'rgba(244, 240, 232, 1)',
@@ -42,7 +42,7 @@ export const CalcWallpaperWallStyles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         width: '100%',
-        height: '30%', 
+        height: '40%', 
         borderTopLeftRadius: 50,
         borderTopRightRadius: 50,
         backgroundColor: 'rgba(90, 100, 87, 1)',
