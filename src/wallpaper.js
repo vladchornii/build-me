@@ -62,7 +62,7 @@ export function Wallpaper({navigation}) {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно шпалер:</Text>
-          <Text>{result}</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{result} шт.</Text>
         </View>
         )}
         </View>

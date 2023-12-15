@@ -61,7 +61,7 @@ export const Tile= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно настінної плитки:</Text>
-          <Text>{result}</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{result} шт.</Text>
         </View>
         )}
       </View>
