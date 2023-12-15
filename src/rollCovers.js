@@ -9,15 +9,18 @@ export const RollCovers= ({ navigation }) => {
   const [lengthWall, onChangeLengthWall] = React.useState('');
   const [widthWall, onChangeWidthWall] = React.useState('');
   const [modalVisible, setModalVisible] = React.useState(false);
+
+  
+    let sWallpaper = lengthWallpaper*widthWallpaper;
+    let sWall = widthWall*lengthWall;
+    let result = (sWall/sWallpaper);
+  
   const toggleModal = () => {
-      setModalVisible(!modalVisible);
+     setModalVisible(!modalVisible);
+     
   };
 
-  // const calculateRollCovers = () => {
-  //   var sWallpaper = lengthWallpaper*widthWallpaper;
-  //   var sWall = widthWall*lengthWall;
-  //   var modalVisible = sWall/sWallpaper;
-  // }
+  
   return(
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
      <View style={globalStyle.container}>
@@ -64,7 +67,9 @@ export const RollCovers= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно рулонів:</Text>
+          <Text>{result}</Text>
         </View>
+        
         )}
       </View>
     </TouchableWithoutFeedback>

@@ -12,6 +12,10 @@ export function Wallpaper({navigation}) {
     const toggleModal = () => {
         setModalVisible(!modalVisible);
     };
+    let sWallpaper = (lengthWallpaper*widthWallpaper);
+    let sWall = widthWall*lengthWall;
+    let result = (sWall/sWallpaper); 
+    
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={globalStyle.container}>
@@ -58,6 +62,7 @@ export function Wallpaper({navigation}) {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно шпалер:</Text>
+          <Text>{result}</Text>
         </View>
         )}
         </View>

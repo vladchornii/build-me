@@ -12,6 +12,11 @@ export const TileFloor= ({ navigation }) => {
   const toggleModal = () => {
       setModalVisible(!modalVisible);
   };
+
+    let sTile = (lengthTile*widthTile)/1000000;
+    let sWall = widthWall*lengthWall;
+    let result = (sWall/sTile); 
+    
   return(
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
      <View style={globalStyle.container}>
@@ -58,6 +63,7 @@ export const TileFloor= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно плитки на підлогу:</Text>
+          <Text>{result}</Text>
         </View>
         )}
      </View>
