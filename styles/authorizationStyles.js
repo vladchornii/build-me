@@ -20,7 +20,7 @@ export const authorizationStyles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         borderColor: 'rgba(244, 240, 232, 1)',
-        margin: 5,
+        margin: 10,
         paddingLeft: 20,
         color: 'rgba(244, 240, 232, 1)',
     },
@@ -35,7 +35,7 @@ export const authorizationStyles = StyleSheet.create({
         backgroundColor:'rgba(244, 240, 232, 1)',
         margin: 5,
         marginTop: 25,
-        marginBottom: 5,
+        marginBottom: 15,
     },
     continueButtonText: {
         fontFamily: 'playfair-bold',
@@ -54,5 +54,7 @@ export const authorizationStyles = StyleSheet.create({
     },
     image:{
         maxWidth: '100%',
+        marginTop: -220,
+        marginBottom: 50
     }
 })
