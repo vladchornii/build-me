@@ -15,6 +15,15 @@ export const Tile= ({ navigation }) => {
   let sTile = (lengthTile*widthTile)/1000000;
     let sWall = widthWall*lengthWall;
     let result = (sWall/sTile); 
+    if (result <= 0,  lengthWallpaper <= 0, widthWallpaper <= 0, result => 2000000000  ) 
+    {
+      result = 'Неможливо визначити кількість';
+    }
+    else 
+    {
+       result = Math.ceil(result);
+    };
+    
   return(
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={globalStyle.container}>

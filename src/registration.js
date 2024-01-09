@@ -19,7 +19,7 @@ export function Registration({navigation}) {
       console.log('Account created!')
       const user = userCredential.user ;
       console.log(user)
-      Alert.alert('You singned up!')
+      Alert.alert('Реєстрація успішна!')
       navigation.navigate("Authorization");
 
 
