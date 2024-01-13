@@ -42,7 +42,7 @@ export const CalcWallpaperWallStyles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         width: '100%',
-        height: '40%', 
+        height: '45%', 
         borderTopLeftRadius: 50,
         borderTopRightRadius: 50,
         backgroundColor: 'rgba(90, 100, 87, 1)',
