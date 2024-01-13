@@ -22,7 +22,7 @@ export const Authorization = ({ navigation }) => {
       const user = userCredential.user ;
       console.log(user)
       navigation.navigate("Subscription");
-      Alert.alert('Ви увійшли!')
+      Alert.alert('You signed in!')
     })
     .catch(error => {
       console.log(error)
