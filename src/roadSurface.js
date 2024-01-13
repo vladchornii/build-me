@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard} from "react-native";
+import { View, Text, Image,  TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard} from "react-native";
 import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
@@ -13,6 +13,29 @@ export const RoadSurface= ({ navigation }) => {
   const toggleModal = () => {
       setModalVisible(!modalVisible);
   };
+
+  let resultCrushedStone = (lengthCrushedStone*widthCrushedStone*heightCrushedStone);
+  let resultConcrete = (lengthConcrete*heightConcrete*0,1208); 
+
+
+    if (resultCrushedStone <= 0,  lengthCrushedStone <= 0, widthCrushedStone <= 0, heightCrushedStone <= 0, resultCrushedStone >= 2000000000 ) 
+    {
+      resultCrushedStone = 'Неможливо визначити кількість';
+    }
+    else 
+    {
+       resultCrushedStone = Math.ceil(resultCrushedStone);
+    };
+
+    if (resultConcrete <= 0,  lengthConcrete <= 0, heightConcrete <= 0, resultCrushedStone >= 2000000000) 
+    {
+      resultConcrete = 'Неможливо визначити кількість';
+    }
+    else 
+    {
+       resultConcrete = Math.ceil(resultConcrete);
+    };
+    
   return(
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={globalStyle.container}>
@@ -64,7 +87,12 @@ export const RoadSurface= ({ navigation }) => {
           <Image style={CalcWallpaperWallStyles.image} source={require("../assets/images/cross.png")}/>
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
-          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно:</Text>
+          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно щебеневого покриття:</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{resultCrushedStone} м3</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
+          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно асфальтобетонного покриттч:</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{resultConcrete} т</Text>
+          
         </View>
         )}
       </View>
