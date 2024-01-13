@@ -12,7 +12,7 @@ export const authorizationStyles = StyleSheet.create({
     },
     headerText: {
         fontSize: 28,
-        marginBottom: 20,
+        marginBottom: 30,
     },
     input: {
         height: 44,
@@ -46,6 +46,7 @@ export const authorizationStyles = StyleSheet.create({
         fontFamily: 'playfair-regular',
         color: 'rgba(244, 240, 232, 1)',
         fontSize: 15,
+        marginTop: 15,
     },
     forgotPasswordButton: {
         flex: 1,
@@ -54,7 +55,7 @@ export const authorizationStyles = StyleSheet.create({
     },
     image:{
         maxWidth: '100%',
-        marginTop: -220,
-        marginBottom: 50
+        marginTop: -200,
+        marginBottom: 20
     }
 })
