@@ -3,7 +3,8 @@ import { View, Text, Image, TouchableOpacity, TextInput, TouchableWithoutFeedbac
 import { globalStyle } from "../styles/style";
 import { CalcWallpaperWallStyles } from '../styles/calcWallpaperWallStyles';
 
-export const RollCovers= ({ navigation }) => {
+export const RollCovers= ({ navigation }) => 
+{
   const [lengthWallpaper, onChangeLengthWallpaper] = React.useState('');
   const [widthWallpaper, onChangeWidthWallpaper] = React.useState('');
   const [lengthWall, onChangeLengthWall] = React.useState('');
@@ -14,6 +15,15 @@ export const RollCovers= ({ navigation }) => {
     let sWallpaper = lengthWallpaper*widthWallpaper;
     let sWall = widthWall*lengthWall;
     let result = (sWall/sWallpaper);
+      
+    if (result <= 0,  lengthWallpaper <= 0, widthWallpaper <= 0, result => 2000000000  ) 
+    {
+      result = 'Неможливо визначити кількість';
+    }
+    else 
+    {
+       result = Math.ceil(result);
+    };      
   
   const toggleModal = () => {
      setModalVisible(!modalVisible);
@@ -67,7 +77,7 @@ export const RollCovers= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно рулонів:</Text>
-          <Text>{result}</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{result} шт.</Text>
         </View>
         
         )}

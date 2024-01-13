@@ -16,6 +16,15 @@ export const TileFloor= ({ navigation }) => {
     let sTile = (lengthTile*widthTile)/1000000;
     let sWall = widthWall*lengthWall;
     let result = (sWall/sTile); 
+    if (result <= 0,  lengthWallpaper <= 0, widthWallpaper <= 0, result => 2000000000  ) 
+    {
+      result = 'Неможливо визначити кількість';
+    }
+    else 
+    {
+       result = Math.ceil(result);
+    };
+    
     
   return(
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -63,7 +72,7 @@ export const TileFloor= ({ navigation }) => {
           </TouchableOpacity>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно плитки на підлогу:</Text>
-          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>{result} шт</Text>
+          <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{result} шт.</Text>
         </View>
         )}
      </View>
