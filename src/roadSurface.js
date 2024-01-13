@@ -15,7 +15,7 @@ export const RoadSurface= ({ navigation }) => {
   };
 
   let resultCrushedStone = (lengthCrushedStone*widthCrushedStone*heightCrushedStone);
-  let resultConcrete = (lengthConcrete*heightConcrete*0,1208); 
+  let resultConcrete = (lengthConcrete*heightConcrete*0.1208); 
 
 
     if (resultCrushedStone <= 0,  lengthCrushedStone <= 0, widthCrushedStone <= 0, heightCrushedStone <= 0, resultCrushedStone >= 2000000000 ) 
@@ -27,13 +27,13 @@ export const RoadSurface= ({ navigation }) => {
        resultCrushedStone = Math.ceil(resultCrushedStone);
     };
 
-    if (resultConcrete <= 0,  lengthConcrete <= 0, heightConcrete <= 0, resultCrushedStone >= 2000000000) 
+    if ( lengthConcrete <= 0, heightConcrete <= 0, resultCrushedStone >= 2000000000) 
     {
       resultConcrete = 'Неможливо визначити кількість';
     }
     else 
     {
-       resultConcrete = Math.ceil(resultConcrete);
+       resultConcrete = resultConcrete.toFixed(1);
     };
     
   return(
