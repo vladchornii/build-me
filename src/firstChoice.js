@@ -6,7 +6,7 @@ import { SmallRoomStyles } from "../styles/smallRoomStyles";
 
 export const FirstChoice= ({ navigation }) => {
     return (
-        <View style={globalStyle.main}>
+        <View style={[globalStyle.main, firstChoiceStyles.box]}>
             <Text style={[globalStyle.text, firstChoiceStyles.headerText]}>Що плануємо робити?</Text>
             <Text style={[globalStyle.text, firstChoiceStyles.text]}>Оберіть, який тип роботи треба виконати</Text>
             <View style={firstChoiceStyles.icons}>

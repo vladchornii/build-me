@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 export const firstChoiceStyles = StyleSheet.create({
+    box: {
+        justifyContent: 'flex-start',
+        paddingTop: 240,
+    },
     headerText: {
         fontSize: 25,
         fontFamily: 'playfair-bold',
@@ -17,6 +21,6 @@ export const firstChoiceStyles = StyleSheet.create({
     },
     archive: {
         fontSize: 18,
-        marginTop: 100,
+        marginTop: 235,
     },
 })
