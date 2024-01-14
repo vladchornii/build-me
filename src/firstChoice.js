@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity} from "react-native";
 import { globalStyle } from "../styles/style";
 import { firstChoiceStyles } from '../styles/firstChoiceStyles';
+import { SmallRoomStyles } from "../styles/smallRoomStyles";
 
 export const FirstChoice= ({ navigation }) => {
     return (
@@ -14,8 +15,11 @@ export const FirstChoice= ({ navigation }) => {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {navigation.navigate("YourChoiceRoadWorks"); }}>
                     <Image source={require("../assets/images/roadWorksIcon.png")}/>
-                </TouchableOpacity>
-            </View>
+                </TouchableOpacity> 
+            </View>                
+              <TouchableOpacity onPress={() => {navigation.navigate("Archive"); }}>
+                 <Text style={[globalStyle.text, firstChoiceStyles.archive]}>Архів</Text>
+               </TouchableOpacity>
         </View>
     );
   };

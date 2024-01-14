@@ -89,7 +89,7 @@ export const RoadSurface= ({ navigation }) => {
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>Розрахунок</Text>
           <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно щебеневого покриття:</Text>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{resultCrushedStone} м3</Text>
-          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно асфальтобетонного покриттч:</Text>
+          <Text style={[globalStyle.text, CalcWallpaperWallStyles.dropDownText]}>Буде потрібно асфальтобетонного покриття:</Text>
           <Text style={[globalStyle.headerText, CalcWallpaperWallStyles.buttonText, CalcWallpaperWallStyles.dropDownText]}>{resultConcrete} т</Text>
           
         </View>

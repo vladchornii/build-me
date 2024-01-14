@@ -19,6 +19,7 @@ import { TileFloor } from './tileFloor';
 import { RollCovers } from './rollCovers';
 import { MoreDetailedChoiseRoad } from './moreDetailedChoiseRoad';
 import { RoadSurface } from './roadSurface';
+import { Archive } from './archive';
 
 const Stack = createStackNavigator();
 export default function Navigate() {
@@ -117,6 +118,11 @@ export default function Navigate() {
             <Stack.Screen
             name = "RoadSurface"
             component = {RoadSurface}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name = "Archive"
+            component = {Archive}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>

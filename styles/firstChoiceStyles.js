@@ -14,6 +14,9 @@ export const firstChoiceStyles = StyleSheet.create({
     icons: {
         flexDirection: 'row',
         gap: 40,
-    }
-
+    },
+    archive: {
+        fontSize: 18,
+        marginTop: 100,
+    },
 })
