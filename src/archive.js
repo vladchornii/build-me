@@ -1,5 +1,5 @@
 import React from "react";
-import { moreDetailedChoiceStyles } from "../styles/moreDetailedChoiceStyles";
+import { archiveStyles } from "../styles/archiveStyles";
 import { globalStyle } from "../styles/style";
 import { TouchableOpacity, Image } from "react-native";
 import { StatusBar } from 'expo-status-bar';
@@ -148,24 +148,25 @@ export const Archive= ({ navigation }) => {
       return (
         <View key={index} style={styles.row}>
           <Text>{name.name}</Text>
-          <Button title='Delete' onPress={() => deleteName(name.id)} />
-          <Button title='Update' onPress={() => updateName(name.id)} />
+          <Button color = 'rgba(90, 100, 87, 1)' title='Delete' onPress={() => deleteName(name.id)} />
+          <Button color = 'rgba(90, 100, 87, 1)' title='Update' onPress={() => updateName(name.id)} />
         </View>
       );
     });
   };
 
   return( 
-   <View style={globalStyle.container}>
-     <TextInput value={currentName} placeholder='name' onChangeText={setCurrentName} />
-      <Button title="Add Name" onPress={addName} />
+   <View style={[ globalStyle.container]}>
+    <TouchableOpacity style={archiveStyles.arrow} onPress={() => {navigation.navigate("FirstChoice"); }}>
+      <Image source={require("../assets/images/arrow.png")}/>
+    </TouchableOpacity>
+    <Text style={[globalStyle.text, globalStyle.headerText, archiveStyles.headerText]}>Архів</Text>
+     <TextInput style={[archiveStyles.input]} value={currentName} placeholder='name' onChangeText={setCurrentName} />
+      <Button color = 'rgba(90, 100, 87, 1)' title="Add Name" onPress={addName} />
       {showNames()}
-      <Button title="Export Db" onPress={exportDb} />
-      <Button title="Import Db" onPress={importDb} />
+      <Button color = 'rgba(90, 100, 87, 1)' title="Export Db" onPress={exportDb} />
+      <Button color = 'rgba(90, 100, 87, 1)' title="Import Db" onPress={importDb} />
       <StatusBar style="auto" />
-      <TouchableOpacity style={moreDetailedChoiceStyles.arrow} onPress={() => {navigation.navigate("FirstChoice"); }}>
-       <Image source={require("../assets/images/arrow.png")}/>
-      </TouchableOpacity>
     </View>
   );
 };
