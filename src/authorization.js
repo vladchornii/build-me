@@ -61,7 +61,7 @@ export const Authorization = ({ navigation }) => {
         <TouchableOpacity onPress={() => {navigation.navigate("Registration"); }}>
           <Text style={authorizationStyles.buttonText}>Зареєструватися</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={authorizationStyles.forgotPasswordButton} onPress={() => {navigation.navigate("ForgotPassword"); }}>
+        <TouchableOpacity style={authorizationStyles.forgotPasswordButton} >
           <Text style={authorizationStyles.buttonText}>Забули пароль?</Text>
         </TouchableOpacity>
       </View> 

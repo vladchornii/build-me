@@ -50,11 +50,7 @@ export default function Navigate() {
             component = {Registration}
             options={{ headerShown: false }}
             />
-            <Stack.Screen
-            name = "ForgotPassword"
-            component = {ForgotPassword}
-            options={{ headerShown: false }}
-            />
+
             <Stack.Screen
             name = "FirstChoice"
             component = {FirstChoice}

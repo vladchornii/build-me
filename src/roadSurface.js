@@ -27,7 +27,7 @@ export const RoadSurface= ({ navigation }) => {
        resultCrushedStone = Math.ceil(resultCrushedStone);
     };
 
-    if ( lengthConcrete <= 0, heightConcrete <= 0, resultCrushedStone >= 2000000000) 
+    if ( lengthConcrete <= 0, heightConcrete <= 0, resultConcrete >= 2000000000) 
     {
       resultConcrete = 'Неможливо визначити кількість';
     }

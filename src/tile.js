@@ -15,7 +15,7 @@ export const Tile= ({ navigation }) => {
   let sTile = (lengthTile*widthTile)/1000000;
     let sWall = widthWall*lengthWall;
     let result = (sWall/sTile); 
-    if (result <= 0,  lengthTile <= 0, widthTile <= 0, result => 2000000000  ) 
+    if (result <= 0,  lengthTile <= 0, widthTile <= 0, result >= 2000000000  ) 
     {
       result = 'Неможливо визначити кількість';
     }

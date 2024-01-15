@@ -15,7 +15,7 @@ export function Wallpaper({navigation}) {
     let sWallpaper = (lengthWallpaper*widthWallpaper);
     let sWall = widthWall*lengthWall;
     let result = (sWall/sWallpaper); 
-    if (result <= 0,  lengthWallpaper <= 0, widthWallpaper <= 0, result => 2000000000  ) 
+    if (result <= 0,  lengthWallpaper <= 0, widthWallpaper <= 0, result >= 2000000000  ) 
     {
       result = 'Неможливо визначити кількість';
     }
